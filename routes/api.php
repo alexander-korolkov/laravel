@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NotesController;
+use App\Http\Controllers\TodosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,4 @@ Route::post('notes', [NotesController::class, 'store']);
 Route::get('notes/{id}', [NotesController::class, 'show']);
 Route::put('notes/{id}', [NotesController::class, 'update']);
 Route::delete('notes/{id}', [NotesController::class, 'destroy']);
+Route::delete('todos/{id}', [TodosController::class, 'destroy']);
